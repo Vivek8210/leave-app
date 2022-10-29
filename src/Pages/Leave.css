@@ -1,6 +1,18 @@
 table{
     width: 100%;
 }
-table, th, td {
+thead{
+    width: 100%;
+}
+table, tr, th {
     border:1px solid black;
+  }
+  .createLeave{
+    width: 90%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: green;
+color: white;
+font-size: large;
+font-weight: bold;
   }
