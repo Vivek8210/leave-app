@@ -1,0 +1,38 @@
+.main{
+    width: 25%;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+    text-align: start;
+    padding: 10px;
+    font-size: large;
+    font-weight: normal;
+  
+}
+.col-1{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+   border-radius: 50%;
+   height: 80px;
+   width: 60%;
+}
+.col-1-date{
+    display: flex;
+    gap: 30px;
+}
+.col-1-select{
+    text-align: start;
+    padding: 20px;
+    font-size: large;
+}
+.col-1-select-option{
+    font-size: large;
+    padding: 10px;
+}
+option{
+    font-size: large;
+    padding: 20px;
+    height: 40px;
+}
