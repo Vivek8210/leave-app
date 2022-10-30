@@ -121,9 +121,10 @@ useEffect(()=>{
   
      <h1>Applicant leave details</h1>
     <div className="col-1-select">
+    <button className='filter-btn-home' onClick={getApplicantData}>All</button>
       <button className='filter-btn-home' onClick={handlefilter}>Last Six Month</button>
       <button className='filter-btn-home' onClick={handlefilter1}>Last one Year</button>
-      <button className='filter-btn-home' onClick={getApplicantData}>All</button>
+      
     </div>
   
     <div className='col-1-main'>

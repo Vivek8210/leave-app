@@ -38,10 +38,23 @@ img {
   gap: 30px;
 }
 .col-1-select {
+  display: flex;
+  gap: 5px;
   text-align: start;
-  padding: 20px;
-  font-size: large;
+  padding: 10px;
   
+  
+}
+.filter-btn-home{
+  height: 40px;
+  width: 10%;
+  background-color: #888888;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
 }
 
 
@@ -69,10 +82,4 @@ img {
   border: none;
   cursor: pointer;
 }
-.filter-btn-home{
-  height: 40px;
-  width: 10%;
-  background-color: #888888;
-  color: white;
-  padding: 5px;
-}
+
