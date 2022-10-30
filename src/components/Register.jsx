@@ -12,7 +12,7 @@ const Register = () => {
     async function signup(){
 
         let item={name,email,password}
-        console.log(item)
+       
 
       let result=await fetch("https://dkgicggupnrxldwvkeft.supabase.co/auth/v1/signup",{
             method:"POST",
@@ -24,12 +24,12 @@ const Register = () => {
         })
         result=await result.json()
         localStorage.setItem("user-info",JSON.stringify(result))
-        console.log('result', result)
+        
         navigate("/login")
     }
   return (
     <><h1>Register</h1>
-    <div className='main'>
+    <div className='main-register'>
         
 <div className='col-1-input'>Name</div>
 <input type="text" placeholder='Type name here' value={name} onChange={(e)=>setName(e.target.value)}/>

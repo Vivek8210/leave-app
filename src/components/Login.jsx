@@ -13,7 +13,7 @@ const Login = () => {
     async function signin(){
 
         let item ={email, password}
-        console.log(item)
+        // console.log(item)
       let result=await fetch("https://dkgicggupnrxldwvkeft.supabase.co/auth/v1/token?grant_type=password",{
             method:"POST",
             headers:{
@@ -23,9 +23,10 @@ const Login = () => {
             body:JSON.stringify(item)
         })
         result=await result.json()
+        console.log(result)
         let token=result.access_token
 
-        console.log(result)
+       
       let p=  localStorage.setItem("user",JSON.stringify(token))
      
       if(token)
@@ -34,14 +35,14 @@ const Login = () => {
         navigate("/")
       }
       else{
-        alert("InValid Credentials")
+        alert("InValid Login Credentials")
       }
         
     }
   return (
     <>
     <h1>Sign in to your account</h1>
-    <div className='main'>
+    <div className='main-register'>
         
 
 <div className='col-1-input'>Email address</div>

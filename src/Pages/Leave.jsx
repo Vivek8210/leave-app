@@ -3,15 +3,17 @@ import { useState } from 'react'
 import axios from 'axios'
 import "./Leave.css"
 import Home from './Home'
+import { useNavigate } from 'react-router-dom'
 const Leave = () => {
     const[start_date, setStartDate]=useState('')
     const[end_date, setEndDate]=useState('')
     const[reason, setReason]=useState('')
     
+    const navigate=useNavigate()
     let token=JSON.parse(localStorage.getItem("user"))
     async function handleSubmit(){
         let formItem={start_date,end_date,reason}
-        console.log(formItem)
+        // console.log(formItem)
 
         let leav= await fetch("https://dkgicggupnrxldwvkeft.supabase.co/rest/v1/leaves",{
             method:"POST",
@@ -25,29 +27,30 @@ const Leave = () => {
             }
         })
        let res= await leav.json()
-
-        console.log(res)
+      
+    navigate("/")
+      
     }
 
   return (
     <div className="col-1-main-form">
      <table >
-        
+     <thead>  
   <tr>
     <th>Start date</th>
     <th>End date</th>
     <th>Reason</th>
-    <th>Edit</th>
+    
     <th>Submit</th>
   </tr>
   <tr>
     <th><input type="date" placeholder="Start date" value={start_date} onChange={((e)=>setStartDate(e.target.value))}/></th>
     <th><input type="date" placeholder="End date" value={end_date} onChange={((e)=>setEndDate(e.target.value))}/></th>
     <th><input type="text" placeholder='reason' value={reason} onChange={((e)=>setReason(e.target.value))}/></th>
-    <th><button>Edit</button></th>
+    
     <th><button className='createLeave' onClick={handleSubmit}>Create leave</button></th>
   </tr>
-  
+  </thead> 
   
    
 
