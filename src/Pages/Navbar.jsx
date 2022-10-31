@@ -1,10 +1,15 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 const Navbar = () => {
   
+	const navRef = useRef();
 
+	const showNavbar = () => {
+		navRef.current.classList.toggle("responsive_nav");
+	};
 
   const navigate=useNavigate()
   let token=JSON.parse(localStorage.getItem("user"))
@@ -30,22 +35,29 @@ const Navbar = () => {
   }
   // console.log(token)
   return (
-    <>
-      <div className="mainContainer">
-        <div className="logoapp">LEAVE APP</div>
-        <div className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/leave">Create Leave</Link>
-          <Link to="/signup">Sign up</Link>
+    <header>
+    <h3>Leave app</h3>
+    <nav ref={navRef}>
+     
+    <Link to="/">Home</Link>
+           <Link to="/leave">Create Leave</Link>
+           <Link to="/signup">Sign up</Link>
 
-          {token ? (
-              <Link onClick={logout}>Logout</Link> 
-          ) : (
-            <Link to="/login">Login</Link>
-          )}
-        </div>
-      </div>
-    </>
+           {token ? (
+               <Link onClick={logout}>Logout</Link> 
+           ) : (
+             <Link to="/login">Login</Link>
+           )}
+      <button
+        className="nav-btn nav-close-btn"
+        onClick={showNavbar}>
+        <FaTimes />
+      </button>
+    </nav>
+    <button className="nav-btn" onClick={showNavbar}>
+      <FaBars />
+    </button>
+  </header>
   );
 };
 

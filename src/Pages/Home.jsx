@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import {AiFillDelete} from 'react-icons/ai'
+import {FaEdit} from "react-icons/fa"
 import axios from "axios"
 import "./Home.css"
 import { Link, useNavigate } from 'react-router-dom'
@@ -120,9 +122,10 @@ useEffect(()=>{
     <div>
   
      <h1>Applicant leave details</h1>
+     <h3 className='filter-heading'>Filter By Date</h3>
     <div className="col-1-select">
     <button className='filter-btn-home' onClick={getApplicantData}>All</button>
-      <button className='filter-btn-home' onClick={handlefilter}>Last Six Month</button>
+      <button className='filter-btn-home' onClick={handlefilter}>Last six month</button>
       <button className='filter-btn-home' onClick={handlefilter1}>Last one Year</button>
       
     </div>
@@ -137,18 +140,22 @@ useEffect(()=>{
     
        </div>
        <li><b>leave status</b> : <label>permitted</label></li>
-       <br />
+       
        {/* <li><b>Leave Day's</b> : <label>10</label></li><br /> */}
        <div className="col-1-date">
         <li><b>From</b> : <label>{ele.start_date}</label></li>
-        <div><b>To</b> : <label>{ele.end_date}</label></div>
+        <li><b>To</b> : <label>{ele.end_date}</label></li>
        </div>
-       <br />
+       
        <li><b>reason</b> : <label>{ele.reason} </label></li>
        <br /><br />
        <div className='btn-home-leave'>
-        <div ><button className='editLeave'>Edit leave</button></div>
-        <div><button className='deleteLeave' onClick={()=>deleteLeave(ele.id)}>Delete leave</button></div>
+        <div >
+        <FaEdit  style={{color:"green", fontSize:"40px",cursor:"pointer"}}/>
+        </div>
+        <div> 
+        <AiFillDelete style={{color:"red", fontSize:"40px",cursor:"pointer"}} onClick={()=>deleteLeave(ele.id)}/>
+        </div>
        </div>
        </div>
        

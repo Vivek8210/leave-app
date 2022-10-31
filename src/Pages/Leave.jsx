@@ -33,31 +33,22 @@ const Leave = () => {
     }
 
   return (
-    <div className="col-1-main-form">
-     <table >
-     <thead>  
-  <tr>
-    <th>Start date</th>
-    <th>End date</th>
-    <th>Reason</th>
-    
-    <th>Submit</th>
-  </tr>
-  <tr>
-    <th><input type="date" placeholder="Start date" value={start_date} onChange={((e)=>setStartDate(e.target.value))}/></th>
-    <th><input type="date" placeholder="End date" value={end_date} onChange={((e)=>setEndDate(e.target.value))}/></th>
-    <th><input type="text" placeholder='reason' value={reason} onChange={((e)=>setReason(e.target.value))}/></th>
-    
-    <th><button className='createLeave' onClick={handleSubmit}>Create leave</button></th>
-  </tr>
-  </thead> 
-  
-   
 
- 
- 
-</table>
-    </div>
+<div className='col-1-leave-form'>
+<div className='col-1-leave-form-input'>Start Date</div>
+<input type="date" placeholder="Start date" value={start_date} onChange={((e)=>setStartDate(e.target.value))} required/>
+
+<div className='col-1-leave-form-input'>End Date</div>
+<input type="date" placeholder="End date" value={end_date} onChange={((e)=>setEndDate(e.target.value))} required/>
+
+<div className='col-1-leave-form-input'>Reason</div>
+<input className='col-1-leave-form-input-reason' type="text" value={reason} onChange={((e)=>setReason(e.target.value))}/>
+
+<div className='col-1-leave-form-input'></div>
+<br />
+<button className='createLeave' onClick={handleSubmit}>Create leave</button>
+
+</div>
   )
 }
 

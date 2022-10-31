@@ -28,15 +28,16 @@ const Register = () => {
         navigate("/login")
     }
   return (
-    <><h1>Register</h1>
+    <>
+    <h1>Register</h1>
     <div className='main-register'>
         
 <div className='col-1-input'>Name</div>
-<input type="text" placeholder='Type name here' value={name} onChange={(e)=>setName(e.target.value)}/>
+<input type="text" placeholder='Type name here' value={name} onChange={(e)=>setName(e.target.value)} required/>
 <div className='col-1-input'>Email address</div>
-<input type="email" placeholder='Type name here' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+<input type="email" placeholder='Type name here' value={email} onChange={(e)=>setEmail(e.target.value)} required/>
 <div className='col-1-input'>Password</div>
-<input type="password" placeholder='Type name here' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+<input type="password" placeholder='Type name here' value={password} onChange={(e)=>setPassword(e.target.value)} required/>
 <br />
 
 <button className='btn' onClick={signup}>Sign Up</button>
