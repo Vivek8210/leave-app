@@ -17,8 +17,10 @@ These are the technologies used in this project which are available below with t
 1. React.js
 
 2.HTML5
+
 3. CSS
 4. For database -API
+
 
 
 
@@ -27,9 +29,9 @@ These are the technologies used in this project which are available below with t
 This is the leave app if you want to take leave first login and if you new user first you should sign up and then after login with you email and then after you will put the date when you want leave . You can only see your data and we can filter last six months and last one year leave. We can logout also after take leave
 
 ## Snapshot :
-<img src="https://static.c.realme.com/IN/thread/1362492550103035904.jpg" style="width:70%;height:90%">
-<img src="https://user-images.githubusercontent.com/99671890/171990118-0356252f-a1bc-4114-820c-2ae38526aec3.png" style="width:80%;height:90%">
-<img src="https://user-images.githubusercontent.com/99671890/171989871-c2531930-3a78-4917-b72d-739c54e92de5.png" style="width:80%;height:90%>
+<img src="https://static.c.realme.com/IN/thread/1362492550103035904.jpg" style="width:100%;height:90%">
+<img src="https://user-images.githubusercontent.com/99671890/171990118-0356252f-a1bc-4114-820c-2ae38526aec3.png" style="width:100%;height:90%">
+<img src="https://user-images.githubusercontent.com/99671890/171989871-c2531930-3a78-4917-b72d-739c54e92de5.png" style="width:100%;height:90%>
 
 
 
